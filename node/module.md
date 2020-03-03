@@ -12,4 +12,10 @@ exports = module.exports
 
 
 http://nodejs.cn/api/modules.html
+node文档
+
 https://nodejs.org/en/knowledge/getting-started/what-is-require/
+node解释require
+
+http://javascript.ruanyifeng.com/nodejs/module.html
+中文文档解释
