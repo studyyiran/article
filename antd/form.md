@@ -11,6 +11,13 @@ Form层面上有什么呢?
 3)hideRequireTag
 这个form他就是做了form该做的事情.全局性质的样式,回调等.
 
+> onSubmit是什么时候触发的呢？我觉得应该是，
+>用户点击提交以后，通过了检测，然后触发的把。
+
+
+首先在v3里面，form是由Form.create创建的。他有两个参数
+一个是option，这个是传入了obj，是个简单的函数调用。
+然后是Component，这是一个hoc，或者更准确，是一个装饰器。因为返回的Component被config装饰了。
 
 
 
