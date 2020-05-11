@@ -96,3 +96,14 @@ setField.设置表单区域.
     }
 }
 
+
+
+--第二次结构--
+form本质上，就是一个组件。没有进行任何神奇的封装。那么
+
+1.它内部的众多表单是如何被包裹，实现的呢？或者说
+create。create注入了一些props。getFieldDecorator
+Item
+{getFieldDecorator}
+的关系是什么
+2.他的onSubmit
