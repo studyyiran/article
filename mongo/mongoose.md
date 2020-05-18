@@ -5,6 +5,7 @@ documents
 
 一些晦涩的问题
 populate为什么可以通过一个字符串就定位到？
+它里面封装了mongo的查询。
 
 ### 连接数据库
 ```javascript
@@ -28,23 +29,14 @@ protocal + hostnameIp + port +dbName
 
 
 ### 几个关系
-> collections是什么？
-
-
 Schema
 他是用于验证
 
 schemaTypes
 里面的一些特殊的
-unique。唯一索引
-
-{timestamps: true} 自带时间戳
-required
-default
-mongoose.Schema.Types.ObjectId;
 
 
-Model
+## Model
 他的大小写规则（mongoose通过他的名字来。）
 
 他可以通过new + save和create的方法
@@ -63,7 +55,7 @@ schema 是model的验证对象。
 ### schema 和model
 Schema我理解到，他和TS的interface有点像
 
-model，我觉得有点像一个类装饰器，通过传入schema，返回一个构造函数(models是从头Schema编译来的构造函数。)
+model，我觉得有点像一个类装饰器，通过传入schema，返回一个构造函数(models是从Schema编译来的构造函数。)
 ```javascript
 // 生成
 const studentModel = mongoose.model('modelname', Schema)
@@ -82,3 +74,9 @@ const studentOne = studentModel.findById(123);
 studentOne.name = 'student123'
 studentOne.save();
 ```
+
+
+
+一些问题
+我更新schema是不是会改变version呢？
+我有的时候会遇到字段的覆盖问题。就是我的新字段上不去
